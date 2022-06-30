@@ -17,6 +17,7 @@
 		B5BE3B0C286CF73A00E611D9 /* InstagramTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B5BE3B0B286CF73A00E611D9 /* InstagramTests.m */; };
 		B5BE3B16286CF73A00E611D9 /* InstagramUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B5BE3B15286CF73A00E611D9 /* InstagramUITests.m */; };
 		B5BE3B18286CF73A00E611D9 /* InstagramUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B5BE3B17286CF73A00E611D9 /* InstagramUITestsLaunchTests.m */; };
+		B5BE3B26286D5D6300E611D9 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5BE3B25286D5D6300E611D9 /* LoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		B5BE3B11286CF73A00E611D9 /* InstagramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstagramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5BE3B15286CF73A00E611D9 /* InstagramUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstagramUITests.m; sourceTree = "<group>"; };
 		B5BE3B17286CF73A00E611D9 /* InstagramUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstagramUITestsLaunchTests.m; sourceTree = "<group>"; };
+		B5BE3B24286D5D6300E611D9 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		B5BE3B25286D5D6300E611D9 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 				B5BE3AFD286CF73900E611D9 /* LaunchScreen.storyboard */,
 				B5BE3B00286CF73900E611D9 /* Info.plist */,
 				B5BE3B01286CF73900E611D9 /* main.m */,
+				B5BE3B24286D5D6300E611D9 /* LoginViewController.h */,
+				B5BE3B25286D5D6300E611D9 /* LoginViewController.m */,
 			);
 			path = Instagram;
 			sourceTree = "<group>";
@@ -270,6 +275,7 @@
 				B5BE3AF1286CF73800E611D9 /* AppDelegate.m in Sources */,
 				B5BE3B02286CF73900E611D9 /* main.m in Sources */,
 				B5BE3AF4286CF73800E611D9 /* SceneDelegate.m in Sources */,
+				B5BE3B26286D5D6300E611D9 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
