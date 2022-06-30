@@ -92,4 +92,75 @@
             </objects>
             <point key="canvasLocation" x="1300" y="175"/>
         </scene>
+            <!--Registration View Controller-->
+        <scene sceneID="R67-TO-kkS">
+            <objects>
+                <viewController id="wGX-1x-2VI" customClass="RegistrationViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QN4-ZL-Wig">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AgE-Wa-dRN">
+                                <rect key="frame" x="58" y="156" width="279" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="5p0-ni-RGC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5hK-Ng-Fcr">
+                                <rect key="frame" x="58" y="253" width="279" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="zBs-Za-QWl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ERl-bk-wgH">
+                                <rect key="frame" x="58" y="352" width="279" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="yDk-DR-qlw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXj-6Z-e15">
+                                <rect key="frame" x="129" y="464" width="136" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Register"/>
+                                <connections>
+                                    <action selector="segueToLogin:" destination="wGX-1x-2VI" eventType="touchUpInside" id="RGX-ny-Tu9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ygo-gc-NBW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ERl-bk-wgH" firstAttribute="top" secondItem="5hK-Ng-Fcr" secondAttribute="bottom" constant="65" id="4Ai-Of-BrG"/>
+                            <constraint firstItem="ERl-bk-wgH" firstAttribute="centerX" secondItem="hXj-6Z-e15" secondAttribute="centerX" id="8Fu-9Q-zDq"/>
+                            <constraint firstItem="AgE-Wa-dRN" firstAttribute="trailing" secondItem="5hK-Ng-Fcr" secondAttribute="trailing" id="8UQ-es-YDU"/>
+                            <constraint firstItem="AgE-Wa-dRN" firstAttribute="leading" secondItem="5hK-Ng-Fcr" secondAttribute="leading" id="DAa-Kc-sMK"/>
+                            <constraint firstItem="5hK-Ng-Fcr" firstAttribute="trailing" secondItem="ERl-bk-wgH" secondAttribute="trailing" id="Gno-rz-M2H"/>
+                            <constraint firstItem="hXj-6Z-e15" firstAttribute="top" secondItem="ERl-bk-wgH" secondAttribute="bottom" constant="78" id="IEq-CP-x4y"/>
+                            <constraint firstItem="5hK-Ng-Fcr" firstAttribute="top" secondItem="AgE-Wa-dRN" secondAttribute="bottom" constant="63" id="J70-uz-ETQ"/>
+                            <constraint firstItem="AgE-Wa-dRN" firstAttribute="top" secondItem="Ygo-gc-NBW" secondAttribute="top" constant="156" id="JDV-Ri-ZOK"/>
+                            <constraint firstItem="Ygo-gc-NBW" firstAttribute="trailing" secondItem="AgE-Wa-dRN" secondAttribute="trailing" constant="77" id="XFz-Jw-yDQ"/>
+                            <constraint firstItem="Ygo-gc-NBW" firstAttribute="bottom" secondItem="hXj-6Z-e15" secondAttribute="bottom" constant="313" id="XYb-cZ-CSX"/>
+                            <constraint firstItem="hXj-6Z-e15" firstAttribute="leading" secondItem="Ygo-gc-NBW" secondAttribute="leading" constant="129" id="agU-pp-Jf4"/>
+                            <constraint firstItem="AgE-Wa-dRN" firstAttribute="leading" secondItem="Ygo-gc-NBW" secondAttribute="leading" constant="58" id="deW-yb-kl6"/>
+                            <constraint firstItem="5hK-Ng-Fcr" firstAttribute="leading" secondItem="ERl-bk-wgH" secondAttribute="leading" id="pQL-Mz-6cX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="4RF-Tc-0ru"/>
+                    <connections>
+                        <outlet property="registrationEmail" destination="5hK-Ng-Fcr" id="b8w-gH-hz1"/>
+                        <outlet property="registrationPassword" destination="ERl-bk-wgH" id="Tp3-kp-PhW"/>
+                        <outlet property="usernameRegistration" destination="AgE-Wa-dRN" id="bKo-T9-vJt"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="segueToLogin" id="mFR-CS-ZAx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mux-p7-WL8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1299" y="1063"/>
+        </scene>
 </document>
