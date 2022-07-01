@@ -10,30 +10,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
+
 - (void)registerUser {
-    // initialize a user object
     PFUser *newUser = [PFUser user];
-    
-    // set user properties
     newUser.username = self.usernameRegistration.text;
     newUser.email = self.registrationEmail.text;
     newUser.password = self.registrationPassword.text;
     
-    // call sign up function on the object
     [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * error) {
         if (error != nil) {
-            NSLog(@"Error: %@", error.localizedDescription);
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Invalid credetials" message:@"Please fill in correct username, email, and password" preferredStyle:(UIAlertControllerStyleAlert)];
+            UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action){}];
+            [alert addAction:cancelAction];
+            UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action){}];
+            [alert addAction:okAction];
+            [self presentViewController:alert animated:YES completion:nil];
         } else {
-            NSLog(@"User registered successfully");
             
-            // manually segue to logged in view
         }
     }];
 }
 
 - (IBAction)segueToLogin:(id)sender {
+    NSLog(@"works");
     [self registerUser];
     [self performSegueToLogin];
 }
@@ -41,4 +41,9 @@
 - (void)performSegueToLogin {
     [self performSegueWithIdentifier:@"segueToLogin" sender:self];
 }
+- (IBAction)goBackToLogin:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
 @end
